@@ -5,7 +5,7 @@
     
     String url="jdbc:mysql://localhost:3306/registro_usuarios?useSSL=false";
     String usuario="root";
-    String clave="ajugardota2";
+    String clave="contraseña";
     
     Connection conn = null;
     PreparedStatement stmt = null;
