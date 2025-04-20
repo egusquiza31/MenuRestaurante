@@ -1,11 +1,15 @@
 <%@ page import ="java.sql.*"%>
 <%
     String nombre = request.getParameter("nombre");
-    String correo = request.getParameter("email");
-    
-    String url="jdbc:mysql://localhost:3306/registro_usuarios?useSSL=false";
+    String apellido = request.getParameter("apellido");
+    String email = request.getParameter("email");
+    String telefono = request.getParameter("telefono");
+    String password = request.getParameter("password");
+   
+            
+    String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
     String usuario="root";
-    String clave="contraseña";
+    String clave="contraseña_basedatos";
     
     Connection conn = null;
     PreparedStatement stmt = null;
@@ -15,10 +19,13 @@
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url,usuario,clave);
         
-        String sql = "INSERT INTO usuarios (nombre, correo) VALUES (?, ?)";
+        String sql = "INSERT INTO cliente (nombre, apellido , email, telefono, password) VALUES (?, ?, ?, ?, ?)";
         stmt = conn.prepareStatement(sql);
         stmt.setString(1, nombre);
-        stmt.setString(2, correo);
+        stmt.setString(2, apellido);
+        stmt.setString(3, email);
+        stmt.setString(4, telefono);
+        stmt.setString(5, password);
         
         int filas = stmt.executeUpdate();
         

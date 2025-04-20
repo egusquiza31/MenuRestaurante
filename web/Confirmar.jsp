@@ -20,16 +20,16 @@
     <div class="login-container">
         <%
         // Conexión a la base de datos (configura estos valores)
-        String url = "jdbc:mysql://localhost:3306/registro_usuarios?useSSL=false";
+        String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
         String usuario = "root";
-        String contraseña = "contraseña";
+        String contraseña = "contraseña_basedatos";
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url, usuario, contraseña);
             
             // Consulta segura con PreparedStatement
-            String sql = "SELECT id, nombre FROM usuarios WHERE correo = ? AND password = ?";
+            String sql = "SELECT id_cliente, nombre FROM cliente WHERE email = ? AND password = ?";
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, email);
             stmt.setString(2, password);
@@ -38,7 +38,7 @@
             
             if(rs.next()) {
                 // Usuario válido
-                int userId = rs.getInt("id");
+                int userId = rs.getInt("id_cliente");
                 String nombre = rs.getString("nombre");
                 
                 // Crear sesión

@@ -12,7 +12,7 @@
             <input type="text" name="apellido" placeholder="Apellido..." required>
             <input type="text" name="email" placeholder="Correo electrónico..." required>
             <input type="text" name="telefono" placeholder="Telefono..." required>
-            <input type="text" name="contraseña" placeholder="Contraseña..." required>
+            <input type="password" name="password" placeholder="Contraseña..." required>
             <input type="submit" value="Guardar">
         </form>    
     </body>
