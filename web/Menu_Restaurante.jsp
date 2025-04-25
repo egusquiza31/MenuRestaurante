@@ -78,10 +78,15 @@
       margin: 20px;
        }
 
+        /* resto del CSS permanece igual... */
     </style>
 </head>
 
+</head>
+
     <%
+        
+        //Usuario_carrito
     String userName = (String) session.getAttribute("user_name");
     String userEmail = (String) session.getAttribute("user_email");
     
@@ -90,11 +95,14 @@
     <div class="user-info">
         Bienvenido, <%= userName %><br>
         (<%= userEmail %>)
-        <a href="logout.jsp">Cerrar sesión</a>
+        <a href="index.jsp">Cerrar sesión</a>
     </div>
 <%
     }
 %>
+
+
+
 <body>
 
 <header>
@@ -128,21 +136,19 @@
         <div class="content">
             <div class="content-tab" id="content1">
                 <div class="plato">
-                <img src="img/Bruschetta de Tomate.jpg" alt="Bruschetta de Tomate">
-                <div class="plato-info">Bruschetta de Tomate - S/22</div>
-    
+                <img src="img/Bruschetta de Tomate.jpg">
+                <div class="plato-info">Bruschetta de Tomate - S/22</div></div>
+                
                 <form action="Detalle_compra.jsp" method="get">
                 <input type="hidden" name="nombre" value="Bruschetta de Tomate">
                 <input type="hidden" name="precio" value="22.00">
                 <input type="submit" value="Pedir">
-    </form>
-</div>    
-                </div>
+                
+                
                 <div class="plato"><img src="img/Empanadas de Queso.jpg"><div class="plato-info">Empanadas de Queso - S/18</div></div>
                 <div class="plato"><img src="img/Ensalada Caprese.jpg"><div class="plato-info">Ensalada Caprese - S/20</div></div>
                 <div class="plato"><img src="img/Ceviche Clásico.jpg"><div class="plato-info">Ceviche Clásico - S/24</div></div>
                 <div class="plato"><img src="img/Anticuchos de Corazón.jpg"><div class="plato-info">Anticuchos de Corazón - S/25</div></div>
-                
                 <div class="plato"><img src="img/Croquetas de Pollo.jpg"><div class="plato-info">Croquetas de Pollo - S/19</div></div>
             </div>
 
