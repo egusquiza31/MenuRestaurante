@@ -8,7 +8,7 @@
     // Obtener el precio del producto desde la base de datos
     String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
     String user = "root";
-    String pass = "ajugardota2";
+    String pass = "tu_contraseña";
     double precio = 0.0;
     
     try {

@@ -22,7 +22,7 @@
         // Conexión a la base de datos (configura estos valores)
         String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
         String usuario = "root";
-        String contraseña = "ajugardota2";
+        String contraseña = "tu_contraseña";
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
