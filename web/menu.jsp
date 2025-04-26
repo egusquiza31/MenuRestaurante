@@ -119,7 +119,7 @@
             
             String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
             String user = "root";
-            String pass = "ajugardota2";
+            String pass = "menu123";
             Connection conn = null;
             PreparedStatement stmt = null;
             ResultSet rs = null;

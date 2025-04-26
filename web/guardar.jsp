@@ -9,7 +9,7 @@
             
     String url = "jdbc:mysql://localhost:3306/bdmenu_restaurante?useSSL=false";
     String usuario="root";
-    String clave="ajugardota2";
+    String clave="menu123";
     
     Connection conn = null;
     PreparedStatement stmt = null;

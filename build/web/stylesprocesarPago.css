@@ -1,0 +1,63 @@
+/* Estilos procesarPago */
+
+/* Fondo general */
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Degradado naranja suave */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Título */
+.container h1 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Nombre del usuario */
+.user-info {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Cada item del carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 16px;
+    color: #444444;
+}
+
+/* Total a pagar */
+.total {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Mejoras de responsividad */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+}
